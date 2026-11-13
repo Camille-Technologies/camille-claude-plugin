@@ -89,3 +89,7 @@ To test against a local Camille, keep production out of the session. A local ser
 Turn the plugin's server back on in `/mcp` when you're done.
 
 `plugins/camille/.claude-plugin/plugin.json` sets `version`, so installed copies stay on that version until it changes. Bump it with every release.
+
+## License
+
+MIT. See [LICENSE](LICENSE). The license covers this repository only. Camille itself is a hosted service under the [terms of service](https://hirecamille.com/terms), and the Camille name and logo are not licensed here.

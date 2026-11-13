@@ -1,7 +1,7 @@
 {
   "name": "camille",
   "displayName": "Camille",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Work with Camille from Claude Code: read your Tasks and Documents, approve at review, and ask Camille for posts, scans and research",
   "author": {
     "name": "Camille Technologies",
@@ -9,6 +9,7 @@
   },
   "homepage": "https://hirecamille.com",
   "repository": "https://github.com/Camille-Technologies/camille-claude-plugin",
+  "license": "MIT",
   "privacyPolicyUrl": "https://hirecamille.com/privacy",
   "termsOfServiceUrl": "https://hirecamille.com/terms",
   "keywords":["camille", "marketing", "seo", "content", "mcp"]
