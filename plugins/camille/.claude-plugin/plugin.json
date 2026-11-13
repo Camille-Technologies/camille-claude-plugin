@@ -1,7 +1,7 @@
 {
   "name": "camille",
   "displayName": "Camille",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Work with Camille from Claude Code: read your Tasks and Documents, approve at review, and ask Camille for posts, scans and research",
   "author": {
     "name": "Camille Technologies",
