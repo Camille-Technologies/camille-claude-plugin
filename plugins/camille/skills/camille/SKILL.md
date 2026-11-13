@@ -11,6 +11,12 @@ You do the talking and deciding with the user. Camille does the production work.
 
 In Claude Code the tools appear as `mcp__plugin_camille_camille__<tool>`, or `mcp__<server name>__<tool>` when the user added Camille by hand. This guide uses the short tool names.
 
+## Pick the organization first
+
+Each Camille server is one connection to one organization. A user with several organizations has several servers, such as `camille-acme` and `camille-globex`, with the same tools on each.
+
+When more than one Camille server is available, settle which organization the user means before you call anything. Use the server name, or the `/o/<slug>/` part of links a tool has returned. If that doesn't make it clear, ask. Then call every tool in the workflow on that one server. Item, Document and job ids belong to the organization they came from, so never read on one server and approve, edit or start work on another. If the user switches organization, say which server you're moving to.
+
 ## Camille's words
 
 Use these with the user. The app uses them too.

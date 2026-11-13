@@ -77,6 +77,15 @@ claude plugin validate .
 claude plugin validate ./plugins/camille
 ```
 
-To try a local change, add this directory as a marketplace (`claude plugin marketplace add ./`) and install from it. To point Claude at a local Camille instead of production, add it by hand with your dev server's address, for example `claude mcp add --transport http camille-local http://localhost:3000/mcp`.
+To try a local change, add this directory as a marketplace (`claude plugin marketplace add ./`) and install from it.
+
+To test against a local Camille, keep production out of the session. A local server has a different address, so it doesn't replace the plugin's production server. Both stay connected, and a test request could start real Runs or spend real credits.
+
+1. Add the local server with your dev server's address, for example `claude mcp add --transport http camille-local http://localhost:3000/mcp`.
+2. In `/mcp`, select `plugin:camille:camille` and disable it.
+3. Still in `/mcp`, authenticate `camille-local` and pick a test organization.
+4. Tell Claude to use `camille-local` before you ask for anything. Check in `/mcp` that it's the only Camille server connected.
+
+Turn the plugin's server back on in `/mcp` when you're done.
 
 `plugins/camille/.claude-plugin/plugin.json` sets `version`, so installed copies stay on that version until it changes. Bump it with every release.

@@ -7,6 +7,10 @@ description: Work through the Camille items waiting on the user at Plan Review o
 
 Go through what's waiting on the user, one item at a time. You read and suggest. The user decides. Read the `camille` skill first if it isn't loaded, for the terms and the rule that Camille does the production work.
 
+## 0. Pick the organization
+
+If more than one Camille server is available, find out which organization the user wants to review, as the `camille` skill describes. Ask if it isn't clear. Run every step below on that one server. To review another organization afterwards, start again from step 1 on its server.
+
 ## 1. Find what's waiting
 
 Call `list_items` twice, with status `in_progress`:
@@ -43,7 +47,8 @@ For polish, call `edit_document` with the Document's id and its complete new bod
 
 - Start from the text `read_document_content` returned, change only the agreed parts, and send the whole thing. Not a diff.
 - Leave out the Frontmatter. Keep an Article's H1 headline.
-- It works only while the item is still at the same review. If it refuses because the stage moved or Camille is working on the item, tell the user and read the Document again before trying.
+- It works only while the item is still at the same review. If it refuses, for example because the stage moved or Camille is working on the item, stop. Tell the user why and offer to send the change to Camille with `request_content_edit`. Don't call `edit_document` again on your own.
+- If the user later wants to try the edit again, call `get_item_details` first. Edit only if the item is back at the matching review, after you read the Document again and confirm with the user that the agreed changes still fit the new text.
 
 A Site Audit's Deliverable is a pull request on GitHub, so changes there happen on GitHub.
 
