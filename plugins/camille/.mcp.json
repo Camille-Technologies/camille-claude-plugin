@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "camille": {
+      "type": "http",
+      "url": "https://hirecamille.com/mcp"
+    }
+  }
+}

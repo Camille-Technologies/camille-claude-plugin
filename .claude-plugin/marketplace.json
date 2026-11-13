@@ -1,0 +1,16 @@
+{
+  "name": "camille-technologies",
+  "description": "Claude Code plugins for Camille, the hosted marketing teammate at hirecamille.com",
+  "owner": {
+    "name": "Camille Technologies",
+    "url": "https://hirecamille.com"
+  },
+  "plugins": [
+    {
+      "name": "camille",
+      "source": "./plugins/camille",
+      "description": "Connects Claude Code to Camille over MCP and teaches Claude to hand production work to Camille and work through review",
+      "category": "marketing"
+    }
+  ]
+}
